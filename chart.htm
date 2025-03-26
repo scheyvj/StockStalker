@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>User View Chart</title>
+    <link rel="stylesheet" href="chart.css" />
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+  </head>
+  <body>
+    <div class="sidebar">
+      <nav>
+        <ul type="none">
+          <li href="./home.htm">HOME</li>
+          <li href="./articles.htm">ARTICLES AND NEWS</li>
+          <li href="#">CANDLE STICK</li>
+          <li href="tech_analysis.htm">TECHNICAL ANALYSIS</li>
+          <li href="./prediction.htm">PREDICTION</li>
+          <li href="./chatbot.htm">CHAT ASSISTANT</li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="top-nav">
+      <label>StockStalkers</label>
+      <h2>CANDLE STICK PATTERN</h2>
+      <img src="user_profile.jpg" alt="profile_pic" />
+    </div>
+
+    <div class="container">
+      <div class="search-area">
+        <input
+          type="text"
+          id="symbolInput"
+          placeholder="Search for stocks..."
+        />
+        <button onclick="fetchStockData()">🔍</button>
+      </div>
+
+      <div id="chart"></div>
+      <div id="error" class="error"></div>
+    </div>
+
+    <script src="chart.js"></script>
+  </body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Technical Analysis</title>
+    <link rel="stylesheet" href="ta.css" />
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+  </head>
+  <body>
+    <div class="sidebar">
+      <nav>
+        <ul type="none">
+          <li><a href="./home.htm">HOME</a></li>
+          <li><a href="./articles.htm">ARTICLES AND NEWS</a></li>
+          <li><a href="./chart.htm">CANDLE STICK</a></li>
+          <li><a href="#">TECHNICAL ANALYSIS</a></li>
+          <li><a href="./prediction.htm">PREDICTION</a></li>
+          <li><a href="./chatbot.htm">CHAT ASSISTANT</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="top-nav">
+      <label>StockStalkers</label>
+      <h2>Technical Indicators</h2>
+      <img src="user_profile.jpg" alt="profile_pic" />
+    </div>
+
+    <div class="container">
+      <div class="search-area">
+        <input
+          type="text"
+          id="symbolInput"
+          placeholder="Search for stocks..."
+        />
+
+        <select id="indicatorSelect">
+          <option value="SMA">SMA</option>
+          <option value="EMA">EMA</option>
+          <option value="RSI">RSI</option>
+        </select>
+
+        <button onclick="fetchStockData()">🔍</button>
+      </div>
+
+      <div id="chart"></div>
+      <div id="error" class="error"></div>
+    </div>
+
+    <script src="./ta.js"></script>
+  </body>
+</html>
